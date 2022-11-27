@@ -1,7 +1,7 @@
 import React from "react";
-function Certifications() {
+function Certifications({ certificateRef }) {
   return (
-    <div className=" mb-40 mx-10 md:mx-20">
+    <div ref={certificateRef} className=" mb-40 mx-10 md:mx-20">
       <h1 className="mt-10 text-4xl md:text-5xl mb- 1 md:mb-3 ">
         Certifications
       </h1>

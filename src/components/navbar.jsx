@@ -1,12 +1,13 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import { Turn as Hamburger } from "hamburger-react";
-import portfolio from "./data/portfolio";
-function NavBar({ About, Skills, Portfolio, Experience }) {
+
+function NavBar({ About, Skills, Portfolio, Experience, Certificates }) {
   const [isOpen, setOpen] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
   const [skillsHover, setSkillsHover] = useState(false);
   const [projectsHover, setProjectsHover] = useState(false);
   const [experienceHover, setExperienceHover] = useState(false);
+  const [certificationsHover, setCertificationsHover] = useState(false);
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
@@ -71,6 +72,18 @@ function NavBar({ About, Skills, Portfolio, Experience }) {
           >
             Experience
           </li>
+          <li
+            className={
+              certificationsHover
+                ? "underline mt-3 cursor-pointer"
+                : "mt-3 cursor-pointer"
+            }
+            onMouseEnter={() => setCertificationsHover(true)}
+            onMouseLeave={() => setCertificationsHover(false)}
+            onClick={() => scrollToSection(Certificates)}
+          >
+            Certifications
+          </li>
         </ul>
       </div>
       {isOpen && (
@@ -120,6 +133,18 @@ function NavBar({ About, Skills, Portfolio, Experience }) {
             onClick={() => scrollToSection(Experience)}
           >
             Experience
+          </li>
+          <li
+            className={
+              certificationsHover
+                ? "underline mt-3 cursor-pointer"
+                : "mt-3 cursor-pointer"
+            }
+            onMouseEnter={() => setCertificationsHover(true)}
+            onMouseLeave={() => setCertificationsHover(false)}
+            onClick={() => scrollToSection(Certificates)}
+          >
+            Certifications
           </li>
         </ul>
       )}

@@ -13,6 +13,7 @@ function App() {
   const SkillsRef = useRef(null);
   const PortfolioRef = useRef(null);
   const ExperienceRef = useRef(null);
+  const CertificateRef = useRef(null);
 
   return (
     <div className="App ">
@@ -21,13 +22,14 @@ function App() {
         Skills={SkillsRef}
         Portfolio={PortfolioRef}
         Experience={ExperienceRef}
+        Certificates={CertificateRef}
       />
       <Intro />
       <About aboutRef={AboutRef} />
       <Skills skillsRef={SkillsRef} />
       <Portfolio portfolioRef={PortfolioRef} />
       <Experience experienceRef={ExperienceRef} />
-      <Certifications />
+      <Certifications certificateRef={CertificateRef} />
     </div>
   );
 }
