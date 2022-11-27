@@ -10,7 +10,7 @@ function Certifications({ certificateRef }) {
         href="https://www.credly.com/badges/26fffd83-c9b5-4e0f-a651-58c976075a9d?source=linked_in_profile"
         target="_blank"
       >
-        <img src="public\assets\coursera.png" className="mt-10"></img>
+        <img src="\assets\coursera.png" className="mt-10"></img>
       </a>
       <div className="flex flex-col mt-5">
         <h1 className="text-xl font-semibold">
